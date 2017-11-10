@@ -1,5 +1,5 @@
 
-使用技术：nodejs、mongoDB
+主要技术：nodejs、mongoDB、express
 
 实现一个，简单的多人博客系统。
 

@@ -1,8 +1,7 @@
 // router
 module.exports = function (app) {
     app.get('/', function (req, res) {
-        // res.redirect('/posts');
-        res.redirect('/signin');
+        res.redirect('/posts');
     });
 
     app.use('/signup', require('./signup'));

@@ -1,0 +1,60 @@
+<!-- 注册 -->
+<%- include('header') %>
+    <style>
+        .field label{
+            text-align: left;
+        }
+    </style>
+    <div class="ui middle aligned center aligned grid">
+        <div class="column">
+            <!-- <h2 class="ui teal image header">
+                <div class="content">
+                    注册新用户
+                </div>
+            </h2> -->
+            <form class="ui segment form" method="post" enctype="multipart/form-data">
+                <div class="stacked">
+                    <div class="field">
+                        <label>用户名输入</label>
+                        <input type="text" name="username" placeholder="手机号、邮箱" autocomplete="off" required>
+                    </div>
+                    <div class="field">
+                        <label>设置密码</label>
+                        <input type="password" name="password" placeholder="输入密码" autocomplete="off" required>
+                    </div>
+                    <div class="field">
+                        <label>确认密码</label>
+                        <input type="password" name="repassword" placeholder="重新输入密码" autocomplete="off" required>
+                    </div>
+                    <div class="field">
+                        <label>性别</label>
+                        <select name="gender" class="ui dropdown">
+                            <option value="x">保密</option>
+                            <option value="m">男</option>
+                            <option value="f">女</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label>头像上传</label>
+                        <input type="file" name="avatar">
+                    </div>
+                    <div class="field">
+                        <label>个人简介</label>
+                        <textarea name="bio" rows="5" placeholder="简介，300个字内！"></textarea>
+                    </div>
+                    <!-- 按钮 -->
+                    <button type="submit" class="ui fluid large teal submit button">提交</button>
+                </div>
+
+                <div class="ui error message"></div>
+
+            </form>
+
+            <!-- <div class="ui message">
+            New to us?
+            <a href="#">Sign Up</a>
+        </div> -->
+        </div>
+    </div>
+
+    <%- include('footer') %>

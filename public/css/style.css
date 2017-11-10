@@ -1,0 +1,61 @@
+/* main */
+
+html {
+    overflow: hidden;
+}
+
+body {
+    background-color: #eeeeee;
+    font-size: 12px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+.grid {
+    overflow-y: auto;
+    /* 取消，上移 1rem */
+    margin: 0 !important;
+}
+
+.column {
+    max-width: 500px;
+}
+
+/* nav-setting */
+.nav-setting {
+    position: fixed;
+    top: 30px;
+    right: 100px;
+}
+/* end */
+
+/* alert-msg */
+.alert-msg {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    min-width: 200px;
+    max-width: 400px;
+    display: none;
+}
+
+/* article item */
+.article-abstract-item{
+    width: 60%;
+    max-height: 500px;
+    margin: 1px auto;
+}
+
+.avatar{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: right;
+}
+.avatar img{
+    width: 100%;
+    height: 100%;
+}

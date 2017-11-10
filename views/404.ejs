@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>钥匙插错门了哦.</title>
+
+    <style>
+        body {
+            background: -webkit-linear-gradient(top left, yellow 100%, green 0%);
+            overflow: hidden;
+        }
+        /* 下落 */
+        .speed span {
+            position: absolute;
+            height: 41px;
+            width: 1px;
+
+            background: #000000;
+        }
+        .speed span:nth-child(1) {
+            left: 20%;
+            animation: speed .6s linear infinite;
+            animation-delay: -.5s;
+        }
+        .speed span:nth-child(2) {
+            left: 40%;
+            animation: speed .8s linear infinite;
+            animation-delay: -.1s;
+        }
+        .speed span:nth-child(3) {
+            left: 60%;
+            animation: speed2 .6s linear infinite;
+        }
+        .speed span:nth-child(4) {
+            left: 80%;
+            animation: speed2 .5s linear infinite;
+            animation-delay: -.3s;
+        }
+        /* 飞人 */
+        .people {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: rotate(-15deg);
+            animation: people-fly .5s linear infinite;
+        }
+        .people > span {
+            height: 50px;
+            width: 8px;
+            background: #000000;
+            position: absolute;
+            top: -6px;
+            left: 15px;
+            border-radius: 2px;
+            transform: rotate(-30deg);
+        }
+        .people > span > span {
+            width: 2px;
+            height: 30px;
+            background-color: #000;
+            position: absolute;
+
+            animation: fly-wind .2s linear infinite;
+        }
+        .people > span > span:nth-child(2) {
+            left: 34px;
+            top: -30px;
+            animation-duration: .4s;
+        }
+        .people > span > span:nth-child(3) {
+            top: 1px;
+            left: -42px;
+            animation-duration: .4s;
+        }
+        .people > span > span:nth-child(4) {
+            top: 4px;
+            left: -40px;
+            animation-duration: 1s;
+        }
+        .hand span {
+            position: absolute;
+            width: 2px;
+            height: 0;
+            border-top: 12px solid transparent;
+            border-right: 20px solid #000;
+            border-bottom: 95px solid transparent;
+            transform: rotate(-15deg);
+        }
+        .hand span:before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-right: 20px solid #000;
+            border-bottom: 45px solid transparent;
+            top: -24px;
+            right: -22px;
+            transform: rotate(-15deg);
+        }
+        .hand span:after {
+            color: red;
+            content: "S";
+            height: 18px;
+            width: 16px;
+            border-radius: 50%;
+            background: #000;
+            position: absolute;
+            right: -12px;
+            top: -18px;
+            transform: rotate(-15deg);
+        }
+        .hand .face {
+            position: absolute;
+            height: 12px;
+            width: 20px;
+            background: #000;
+            border-radius: 20px 20px 0 0;
+            transform: rotate(80deg);
+            right: -8px;
+            top: -20px;
+        }
+        .hand .face:after {
+            content: "";
+            height: 12px;
+            width: 12px;
+            background: #000;
+            right: 2px;
+            top: 5px;
+            position: absolute;
+            transform: rotate(45deg);
+            transform-origin: 50% 50%;
+            border-radius: 0 0 0 2px;
+        }
+        .hand .cowl {
+            position: absolute;
+            top: -32px;
+            right: -16px;
+            width: 6px;
+            height: 20px;
+            border-bottom: 20px solid #000;
+            border-right: 20px solid transparent;
+            transform: rotate(-28deg);
+        }
+        /* 自定义定义动画 */
+        /* speed、speed2 下落动画 */
+        @keyframes speed {
+            0% {
+                top: -100%;
+                opacity: 0;
+            }
+            100% {
+                top: 100%;
+            }
+        }
+        @keyframes speed2 {
+            0% {
+                top: -50%;
+                opacity: 0;
+            }
+            100% {
+                top: 200%;
+            }
+        }
+        /* 飞人动画 */
+        @keyframes people-fly {
+            0% {
+                transform: translate(2px, 1px) rotate(0deg);
+            }
+            10% {
+                transform: translate(-1px, -3px) rotate(-1deg);
+            }
+            20% {
+                transform: translate(-2px, 0px) rotate(1deg);
+            }
+            30% {
+                transform: translate(1px, 2px) rotate(0deg);
+            }
+            40% {
+                transform: translate(1px, -1px) rotate(1deg);
+            }
+            50% {
+                transform: translate(-1px, 3px) rotate(-1deg);
+            }
+            60% {
+                transform: translate(-1px, 1px) rotate(0deg);
+            }
+            70% {
+                transform: translate(3px, 1px) rotate(-1deg);
+            }
+            80% {
+                transform: translate(-2px, -1px) rotate(1deg);
+            }
+            90% {
+                transform: translate(2px, 1px) rotate(0deg);
+            }
+            100% {
+                transform: translate(1px, -2px) rotate(-1deg);
+            }
+        }
+        @keyframes fly-wind {
+            0% {
+                top: -20px;
+            }
+            100% {
+                top: 80px;
+                opacity: 0;
+            }
+        }
+    </style>
+
+</head>
+<body>
+
+<p>&nbsp;</p>
+<h1 style="text-align: center;">噢？是吗？404了耶( •̀ ω •́ )</h1>
+
+<div class="people">
+    <span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </span>
+    <div class="hand">
+        <span></span>
+        <div class="face"></div>
+        <div class="cowl"></div>
+    </div>
+</div>
+
+<div class="speed">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+</body>
+</html>

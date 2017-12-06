@@ -4,6 +4,7 @@ var express = require('express');
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
 var flash = require('connect-flash'); // 消息通知
+var compression = require('compression');
 
 var pkg = require('./package');
 var winston = require('winston');
@@ -19,6 +20,9 @@ var app = express();
 app.set('views', path.join(__dirname, 'views'));
 // 设置模板引擎为 ejs
 app.set('view engine', 'ejs');
+
+// gzip支持
+app.use(compression());
 
 // 设置静态文件目录
 app.use(express.static(path.join(__dirname, 'public')));
